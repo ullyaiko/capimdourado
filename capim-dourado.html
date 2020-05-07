@@ -8,6 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!--CSS-->
         <link href="capim-dourado.css" rel="stylesheet">
+        <link rel="stylesheet" href="capimdouradodesktop.css">
+        <link rel="stylesheet" href="capimdouradotablet.css">
+        <link rel="stylesheet" href="capimdouradocelular.css">
         <link href="normalize.css" rel="stylesheet">
         <!--SEO-->
         <meta name="Keywords" content="padaria, artesanal, vila Romana,  ">
@@ -25,10 +28,10 @@
         <!--logo-->
         <div id="logo-principal"><a href="index.html"><img id="logo" src="img/logo-principal.svg"></a></div>
         <!--menu-->
-        <div class="nav-toggle">
-            <div class="nav-toggle-bar"></div>
-        </div>
-        <nav class="menu">
+        <nav id="main-nav">
+            <button id="menu-toggle" aria-expanded="false" aria-controls="navigation">
+                <span aria-hidden="true"/>
+            </button>
             <ul>
                 <li><a href="index.html"><strong> Home </strong></a> </li>
                 <li><a href="capim-dourado.html"><strong> Capim Dourado </strong></a></li>

@@ -1,16 +1,15 @@
 (function() {
 
-	var hamburger = {
-		navToggle: document.querySelector('.nav-toggle'),
-		nav: document.querySelector('nav'),
+	function toggle(event) {
+		
+		var nav = document.getElementById("main-nav");
+		
+		var expanded = event.currentTarget.getAttribute("aria-expanded");
+		nav.classList.toggle("expanded");
+		event.currentTarget.setAttribute('aria-expanded',(expanded=="true")? "false":"true");
 
-		doToggle: function(e) {
-			e.preventDefault();
-			this.navToggle.classList.toggle('expanded');
-			this.nav.classList.toggle('expanded');
-		}
-	};
+	}
 
-	hamburger.navToggle.addEventListener('click', function(e) { hamburger.doToggle(e); });
+	document.getElementById("menu-toggle").addEventListener('click',toggle,false)
 
 }());

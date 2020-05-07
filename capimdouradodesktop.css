@@ -18,23 +18,23 @@ width: 300px;
 height: auto;
 }
 
-.menu{
-  text-align: center;
+#main-nav button {
+  display: none;
 }
 
-.menu ul li{
-  list-style: none;
+#main-nav ul li{
   display: inline-block;
 }
 
-.menu strong{
+#main-nav strong{
   padding: 10px 20px;
 }
 
-.menu > ul > li > a > strong:hover{
+#main-nav > ul > li > a > strong:hover{
   background-color: #415538;
   color: white;
 }
+
 /* tirar margem geral */
 .margem-geral{
   padding: 2% 0;
@@ -167,7 +167,5 @@ fieldset > p{
 .align-start{
   text-align: start;
 } */
-
-}
 
 }
