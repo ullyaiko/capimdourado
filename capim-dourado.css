@@ -7,18 +7,17 @@
 /* -----------------CSS para todas as páginas--------------------- */
 /* --------------------------------------------------------------- */
 
+/* estilizando o texto */
 h1, h2, h3, h4, h5, h6, p, strong{
   color: black;
 }
-
+/* rever isso, onde é usado text-align: center; */
 h1, h2, h3, h4, h5, h6, p{
   text-align: center;
 }
-
 p, a, figcaption{
   font-family: 'Open Sans Condensed', sans-serif;
 }
-
 h1, h2, h3, h4, h5, h6, strong, .icone-whats-delivery, label{
   font-family: 'Open Sans', sans-serif;
 }
@@ -32,23 +31,20 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-
+/* menu */
 nav{
   padding-bottom: 1%;
+  padding-top: 3%;
 }
-
 #main-nav{
   text-align: center;
 }
-
 #main-nav ul{
   padding: 0;
 }
-
 #main-nav ul li{
   list-style: none;
 }   
-
 a{
   text-decoration: none;
   color: black;
@@ -66,18 +62,96 @@ footer{
   flex-wrap: wrap;
   background-color: #47583b;
 }
-
 footer h3, footer p{
   color: white;
 }
-
 .logo-contato-footer{
   fill: white;
 }
 
+/* --------------------------------------------------------------- */
+/* ------------------CSS para o menu hamburguer------------------- */
+/* --------------------------------------------------------------- */
+
+@media screen and (min-width: 0px) and (max-width: 1136px){
+
+  #main-nav{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+  #main-nav button {
+   width: 35px;
+   height: 35px;
+   display: flex;
+   position: relative;
+   border: none;
+   margin: 0;
+   padding: 0;
+   font-size: 1rem;
+   line-height: 1;
+   background: transparent;
+   -webkit-appearance: none;
+ }
 
 
+ /* collapsed */
 
+ #main-nav ul{
+   max-height: 0;
+   opacity: 0;
+   transition: opacity 0.8s ease-in-out, max-height 0.8s ease-in-out;
+   overflow: hidden;
+ }
+
+ #main-nav span, #main-nav span:before, #main-nav span:after{
+   transition: .4s;
+   position: absolute;
+   display: block;
+   content: "";
+   width: 100%;
+   height: 2px;
+   background: black;
+ }
+
+ #main-nav span:before {
+   top: -12px;
+ }
+
+ #main-nav span:after {
+   bottom: -12px;
+ }
+
+ /* expanded */
+ #main-nav.expanded ul {
+   display: block;
+   max-height: 200px;
+   opacity: 1;
+ }
+
+ #main-nav.expanded span{
+   background-color: transparent;
+ }
+
+ #main-nav.expanded span:before{
+   transform-origin: center;
+   transform: rotate(-45deg);
+   top: 0;
+ }
+
+ #main-nav.expanded span:after{
+   transform-origin: center;
+   transform: rotate(45deg);
+   bottom: 0;
+ }
+
+ *:focus{
+   outline: none;
+ }
+ 
+}
 
 /* --------------------------------------------------------------- */
 /* ---------------------------slideshow--------------------------- */
@@ -177,89 +251,3 @@ footer h3, footer p{
   from {opacity: .4}
   to {opacity: 1}
 }
-
-/* --------------------------------------------------------------- */
-/* ------------------CSS para o menu hamburguer------------------- */
-/* --------------------------------------------------------------- */
-
-@media screen and (min-width: 0px) and (max-width: 1013px){
-
-     #main-nav{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
- 
-     #main-nav button {
-      width: 35px;
-      height: 35px;
-      display: flex;
-      position: relative;
-      border: none;
-      margin: 0;
-      padding: 0;
-      font-size: 1rem;
-      line-height: 1;
-      background: transparent;
-      -webkit-appearance: none;
-    }
-
-
-    /* collapsed */
-
-    #main-nav ul{
-      max-height: 0;
-      opacity: 0;
-      transition: opacity 0.8s ease-in-out, max-height 0.8s ease-in-out;
-      overflow: hidden;
-    }
-
-    #main-nav span, #main-nav span:before, #main-nav span:after{
-      transition: .4s;
-      position: absolute;
-      display: block;
-      content: "";
-      width: 100%;
-      height: 2px;
-      background: black;
-    }
-
-    #main-nav span:before {
-      top: -12px;
-    }
-
-    #main-nav span:after {
-      bottom: -12px;
-    }
-
-
-    /* expanded */
-
-    #main-nav.expanded ul {
-      display: block;
-      max-height: 200px;
-      opacity: 1;
-    }
-
-    #main-nav.expanded span{
-      background-color: transparent;
-    }
-
-    #main-nav.expanded span:before{
-      transform-origin: center;
-      transform: rotate(-45deg);
-      top: 0;
-    }
-
-    #main-nav.expanded span:after{
-      transform-origin: center;
-      transform: rotate(45deg);
-      bottom: 0;
-    }
-
-    *:focus{
-      outline: none;
-    }
-    
-  }

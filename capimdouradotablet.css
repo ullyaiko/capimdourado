@@ -5,33 +5,29 @@
 /* --------------------------------------------------------------- */
 /* --------------CSS apenas para a versão tablet------------------ */
 /* --------------------------------------------------------------- */
-@media screen and (min-width: 0px) and (max-width: 1013px){
+@media screen and (min-width: 0px) and (max-width: 1136px){
 
+
+    /* estilizando texto geral */
     h1, h2, h3, h4, h5, h6, strong, .icone-whats-delivery{
     font-size: 24px;
     }
-
     p, figcaption, a{
-        font-size: 21px;
-      }
-
-  
+      font-size: 22px;
+    }
+    h1, h2, h3, h4, h5, h6, p{
+      text-align: center;
+    }    
+    h1, h2, h3, h4, h5, h6, strong{
+      font-size: larger;
+    }
+    .texto-margem{
+      padding: 0 8%;
+    }
     #logo-principal img{
       width: 250px;
       height: auto;
     }
-
-    .texto-margem{
-        padding: 0 10%;
-    }
-
-    h1, h2, h3, h4, h5, h6, p{
-      text-align: center;
-    }
-      
-    h1, h2, h3, h4, h5, h6, strong{
-        font-size: larger;
-    }  
 
     .footer-item{
         width: 50%;
@@ -43,26 +39,22 @@
 
 /* Home */
 
-/* imgs destaques */
-
-.flex-container-home{
+/* 4 imgs com diferenciais da padaria  */
+  .flex-container-home{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-}
-
-#qualidades-destaque {
+  }
+  #qualidades-destaque {
     display: inline-block;
     position: relative;
     text-align: center;
     margin-inline-start: 1em;
     margin-inline-end: 1em;
   }
-  
   #qualidades-destaque img{
     width: 200px;
   }
-  
   #qualidades-destaque figcaption{
     position: absolute;
     top: 48%;
@@ -72,6 +64,7 @@
 
 /* Delivery */
 
+/* icone do whatsapp */
   .icone-whats-delivery-text, .icone-whats-delivery{
     fill: #2D9139;
     display: block;
@@ -79,7 +72,6 @@
     text-align: center;
     color: #2D9139;
   }
-  
   .icone-whats-delivery{
     height: 6em;
     width: 6em;

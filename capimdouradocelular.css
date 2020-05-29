@@ -5,37 +5,30 @@
 /* --------------------------------------------------------------- */
 
 @media screen and (min-width: 0px) and (max-width: 559px){
+
+  /* estilizando texto geral */
   h1, h2, h3, h4, h5, h6, strong, .icone-whats-delivery{
     font-size: 24px;
-    }
+  }
+  p, figcaption, a{
+      font-size: 20px;
+  }
+  h1, h2, h3, h4, h5, h6, p{
+      text-align: center;
+  }      
+  h1, h2, h3, h4, h5, h6, strong{
+        font-size: larger;
+  }        
+  .texto-margem{
+      padding: 0 1%;
+  }
 
-    p, figcaption, a{
-        font-size: 23px;
-      }
-
-  
-    #logo-principal img{
+  #logo-principal img{
       width: 250px;
       height: auto;
-    }
+  }
 
-    .texto-margem{
-        padding: 0 10%;
-    }
-
-    h1, h2, h3, h4, h5, h6, p{
-      text-align: center;
-    }
-      
-    h1, h2, h3, h4, h5, h6, strong{
-        font-size: larger;
-    }  
-      
-    p{
-        font-size: 18px;
-    }
-
-    .footer-item{
+  .footer-item{
       width: 100%;
     }
   /* ----------------CSS para páginas específicas------------------- */
@@ -43,13 +36,11 @@
 /* Home */
 
 /* imgs destaques */
-
 .flex-container-home{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-
 #qualidades-destaque {
   display: inline-block;
   position: relative;
@@ -57,11 +48,9 @@
   margin-inline-start: 1em;
   margin-inline-end: 1em;
 }
-
 #qualidades-destaque img{
   width: 200px;
 }
-
 #qualidades-destaque figcaption{
   position: absolute;
   top: 48%;
@@ -132,4 +121,3 @@ margin: 0.5em;
 }
 
 }
-  }

@@ -3,14 +3,18 @@
 /* --------------------------------------------------------------- */
 /* --------------CSS apenas para a versão Desktop----------------- */
 /* --------------------------------------------------------------- */
-@media screen and (min-width: 1014px){
+@media screen and (min-width: 1137px){
 
+/* estilizando texto */
 h1, h2, h3, h4, h5, h6, strong, .icone-whats-delivery{
   font-size: 24px;
 }  
-
 p, figcaption, a{
   font-size: 23px;
+}
+/* padding geral dos textos*/
+.texto-margem{
+  padding: 0 12%;
 }
   
 #logo-principal img{
@@ -18,33 +22,25 @@ width: 300px;
 height: auto;
 }
 
+/* menu */
 #main-nav button {
   display: none;
 }
-
 #main-nav ul li{
   display: inline-block;
 }
-
 #main-nav strong{
   padding: 10px 20px;
 }
-
 #main-nav > ul > li > a > strong:hover{
   background-color: #415538;
   color: white;
 }
 
-/* tirar margem geral */
+/* tirar margem geral
 .margem-geral{
   padding: 2% 0;
-}
-
-/* alinhamento do texto */
-
-.texto-margem{
-  padding: 0 10%;
-}
+} */
 
 .footer-item{
   width: 25%;
@@ -52,18 +48,19 @@ height: auto;
   text-align: center;
 }
 
+/* --------------------------------------------------------------- */
 /* ----------------CSS para páginas específicas------------------- */
+/* --------------------------------------------------------------- */
 
 /* Home */
 
-/* imgs destaques */
+/* 4 imgs com diferenciais da padaria  */
 
 .flex-container-home{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-
 #qualidades-destaque {
   display: inline-block;
   position: relative;
@@ -71,20 +68,17 @@ height: auto;
   margin-inline-start: 1em;
   margin-inline-end: 1em;
 }
-
 #qualidades-destaque img{
   width: 200px;
 }
-
 #qualidades-destaque figcaption{
   position: absolute;
   top: 48%;
   width: 65%;
   left: 18%;
-}
-
 /* Delivery */
 
+/* icone do whatsapp */
 .icone-whats-delivery-text, .icone-whats-delivery{
   fill: #2D9139;
   display: block;
@@ -92,14 +86,14 @@ height: auto;
   text-align: center;
   color: #2D9139;
 }
-
 .icone-whats-delivery{
   height: 8em;
   width: 8em;
 }
 
-
 /* Eventos */
+
+/* alinhamento dos 3 tipos de evento */
 .flex-eventos{
   display: flex;
 }
@@ -110,43 +104,43 @@ height: auto;
 
 /* Contato */
 
-.logo-contato{
-  width: 2em;
-  height: 2em;
-  fill: black;
-}
 .contato-infos-flex-left{
   margin-left: auto;
   margin-right: auto;
-  width: 290px;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
+  width: 300px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  line-height: 1.5em;
 }
-
+.logo-contato{
+  width: 32px;
+  height: 32px;
+  fill: black;
+  vertical-align: middle;
+}
+.contato-infos-flex-left a{
+  vertical-align: middle;
+  padding-left: 1%;
+}
 .contato-section-flex{
   display: flex;
 }
-
 .contato-section-flex-filho{
   width: calc(100%/2);
-  padding: 0 3%;
+  padding-left: 5%;
+  padding-bottom: 3%;
+}
+.contato-section-flex-filho p{
+  text-align: left;
 }
 
 .hora-funcionamento{
   margin-top: 10%;
 }
-
-.maps{
-  width: 90%;
-  height: 200px;
-  margin: 0 5% 2%;
-}
-
 .contato-infos-flex-right{
-  margin-left: 8%;
+  margin-left: 5%;
   margin-right: 5%;
 }
-
 fieldset{
   width: 500px;
   margin-left: auto;
@@ -154,18 +148,23 @@ fieldset{
   border: none;
   color: black;
 }
-
 fieldset > p > label > strong, fieldset > p > input{
-  font-size: 16px;
+  padding-left: 2%;
   width: 100%;
+  height: 35px;
 }
-
 fieldset > p{
   margin: 0.5em;
+  padding-bottom: 3%;
 }
-/* 
-.align-start{
-  text-align: start;
-} */
+fieldset > p > label > strong, fieldset > p > button{
+  width: 40%;
+}
+
+.maps{
+  width: 90%;
+  height: 200px;
+  margin: 0 5% 2%;
+}
 
 }
