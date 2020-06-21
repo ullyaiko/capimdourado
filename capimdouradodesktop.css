@@ -76,6 +76,7 @@ height: auto;
   top: 48%;
   width: 65%;
   left: 18%;
+}
 /* Delivery */
 
 /* icone do whatsapp */
@@ -87,8 +88,8 @@ height: auto;
   color: #2D9139;
 }
 .icone-whats-delivery{
-  height: 8em;
-  width: 8em;
+  height: 7em;
+  width: 7em;
 }
 
 /* Eventos */

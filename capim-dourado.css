@@ -89,7 +89,7 @@ footer h3, footer p{
    position: relative;
    border: none;
    margin: 0;
-   padding: 0;
+   padding: 18px 0 0 0;
    font-size: 1rem;
    line-height: 1;
    background: transparent;
@@ -127,7 +127,7 @@ footer h3, footer p{
  /* expanded */
  #main-nav.expanded ul {
    display: block;
-   max-height: 200px;
+   max-height: 220px;
    opacity: 1;
  }
 
