@@ -124,14 +124,4 @@ fieldset > p{
   margin: 0.5em;
 }
 
-/* ----------------------------------------------------------------- */
-/* ----------------carrossel página delivery----------------------- */
-/* --------------------------------------------------------------- */
-
-  .item-delivery-img.prev-delivery-img {
-    display: none;
-  }
-  .item-delivery-img.next-delivery-img{
-    display: none;
-}
 }
