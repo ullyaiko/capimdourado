@@ -1,42 +1,22 @@
-// I will be creating a different pen with touch support but right // now I have no time for it due to school
+var slideIndex = 1;
+showDeliverySlides(slideIndex);
 
-const slider = document.querySelector(".items-delivery-img");
-const slides = document.querySelectorAll(".item-delivery-img");
-const button = document.querySelectorAll(".button-items");
-
-let current = 0;
-let prev = 4;
-let next = 1;
-
-for (let i = 0; i < button.length; i++) {
-  button[i].addEventListener("click", () => (i == 0 ? gotoPrev() : gotoNext()));
+function plusSlides(n) {
+  showDeliverySlides(slideIndex += n);
 }
 
-const gotoPrev = () =>
-  current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
+// Thumbnail image controls
+function currentDeliverySlide(n) {
+  showDeliverySlides(slideIndex = n);
+}
 
-const gotoNext = () => (current < 4 ? gotoNum(current + 1) : gotoNum(0));
-
-const gotoNum = (number) => {
-  current = number;
-  prev = current - 1;
-  next = current + 1;
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active-delivery-img");
-    slides[i].classList.remove("prev-delivery-img");
-    slides[i].classList.remove("next-delivery-img");
+function showDeliverySlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("item-delivery-img");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
-
-  if (next == 5) {
-    next = 0;
-  }
-
-  if (prev == -1) {
-    prev = 4;
-  }
-
-  slides[current].classList.add("active-delivery-img");
-  slides[prev].classList.add("prev-delivery-img");
-  slides[next].classList.add("next-delivery-img");
-};
+  slides[slideIndex-1].style.display = "block";
+} 
